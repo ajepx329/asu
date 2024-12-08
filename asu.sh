@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e  # Exit immediately if a command exits with a non-zero status
+set -x  # Enable debugging
 
 # Update and install required packages
 echo "Updating system and installing dependencies..."
@@ -7,8 +9,12 @@ apt-get install -y wget git unzip screen
 
 # Clone the gpool-cli repository
 echo "Cloning gpool-cli repository..."
-git clone https://github.com/Kapaljetz666/gpool-cli/
-cd gpool-cli || exit
+if git clone https://github.com/Kapaljetz666/gpool-cli/; then
+    cd gpool-cli
+else
+    echo "Failed to clone the repository. Exiting."
+    exit 1
+fi
 
 # Download and set up miners
 echo "Downloading and setting up miners..."
