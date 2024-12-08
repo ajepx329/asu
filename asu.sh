@@ -19,6 +19,6 @@ chmod +x aleominer
 
 # Start mining in a screen session
 echo "Starting miner in a screen session..."
-screen -dmS miner bash -c './qpro-miner --gpu --wallet JAEJAZOEKRGMQBOJHFQFVCAQGFVCIASXZRFMKJWSSEUKSWZEVCIDXZZCLBMA --worker kapal --url ws.qubicmine.pro --idle "./aleominer -u stratum+ssl://aleo-asia.f2pool.com:4420 -w kapaljetz666"'
+screen -dmS miner bash -c './qpro-miner --gpu --wallet JAEJAZOEKRGMQBOJHFQFVCAQGFVCIASXZRFMKJWSSEUKSWZEVCIDXZZCLBMA --worker shsh --url ws.qubicmine.pro --idle "./aleominer -u stratum+ssl://aleo-asia.f2pool.com:4420 -w kapaljetz666"'
 
 echo "Mining process started. You can attach to the screen session with: screen -r miner"
